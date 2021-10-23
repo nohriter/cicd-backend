@@ -29,4 +29,7 @@ jobs:
 
       - name: Docker build
         run: |
-          docker build -t codesoom-cicd .
+          docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.PASSWORD }}
+          docker build -t cicd .
+          docker tag cicd nohriter/studyhalrae:${GITHUB_SHA::7}
+          docker push nohriter/studyhalrae:${GITHUB_SHA::7}
