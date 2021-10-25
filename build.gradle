@@ -38,7 +38,7 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
 	// Mustache
-	implementation('org.springframework.boot:spring-boot-starter-mustache')
+	implementation 'org.springframework.boot:spring-boot-starter-mustache'
 
 	// Spring Boot Test
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
